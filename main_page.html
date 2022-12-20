@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./Logos/Shortcut.jpg" type="img">
+    <title>Daggen Dask - Home page</title>
+</head>
+<style>
+    :root {
+        --background-cyan : #e0ffff;
+        --background-gray : #d3d3d3;
+        --header-background : #252424;
+        --font-header-color : beige;
+        --font-black : #000;
+        --button-green : #00FF7F;
+        --input-green : #96fcc9;
+        --red-inputs : #f86349;
+        --sf : 12px;
+        --mf : 16px;
+        --if : 18px;
+        --lf: 22px;
+    }
+    body {
+        margin: 0;
+        font-family: 'Barlow', sans-serif;
+        background: var(--background-gray);
+    }
+    #nav_bar {
+        display: flex;
+        width: 100vw;
+        height: 70px;
+        background: var(--background-cyan);
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px var(--button-green) solid;
+    }
+    #logos_container {
+        height: 100%;
+        display: flex;
+    }
+    #Menu {
+        display: none;
+        margin-right: 10%;
+    }
+    #DD_logo {
+        height: 100%;
+    }
+    #left_side ul,
+    #right_side ul {
+        display: flex;
+        list-style: none;
+    }
+    #left_side ul a,
+    #right_side ul a {
+        text-decoration: none;
+        color: var(--font-black);
+        margin: 0px 10px;
+        padding: 3px;
+        font-size: var(--if);
+    }
+    #left_side ul a:hover,
+    #right_side ul a:hover {
+        border: 2px var(--button-green) solid;
+        border-radius: 10px;
+        color: var(--button-green)!IMPORTANT;
+        font-weight: bold;
+    }
+    #right_side ul li:nth-child(1) a{
+        color: var(--background-gray);
+        font-weight: bold;
+    }
+    #right_side ul li:nth-child(2) a{
+        color: var(--red-inputs);
+        font-weight: bold;
+    }
+    @media(max-width:1023px){
+        #Menu {
+            display: inline;
+            margin-right: 5%;
+        }
+        #left_side {
+            display: none;
+        }
+        #right_side ul li:nth-child(1) a{
+            display: none;
+        }
+    }
+    @media(max-width:437px){
+        #right_side ul a {
+        margin: 0px 3px;
+    }
+}
+    
+</style>
+<body>
+    <nav id="nav_bar">
+        <div id="logos_container">
+        <img id="Menu" src="./Icons/menu_icon.png" alt="Menu">
+        <img id="DD_logo" src="./Logos/Daggendask Cyan.jpg" alt="DD_Sign">  
+        </div>
+            <section id="left_side">
+                <ul>
+                    <li>
+                        <a href="/">Your Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="/">Most Actives</a>
+                    </li>
+                    <li>
+                        <a href="/">Gainers</a>
+                    </li>
+                    <li>
+                        <a href="/">Losers</a>
+                    </li>
+                </ul>
+            </section>
+            <section id="right_side">
+                <ul>
+                    <li>
+                        <a href="/">Algoritmic Trading</a>
+                    </li>
+                    <li>
+                        <a href="/">Sign Out</a>
+                    </li>
+                </ul>
+            </section> 
+    </nav>
+    
+</body>
+</html>
