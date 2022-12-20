@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;500;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./Logos/Shortcut.jpg" type="img">
     <title>Daggen Dask - Home page</title>
@@ -13,13 +14,16 @@
 <style>
     :root {
         --background-cyan : #e0ffff;
+        --background-light-blue : #6F8AF7;
         --background-gray : #d3d3d3;
         --header-background : #252424;
         --font-header-color : beige;
         --font-black : #000;
         --button-green : #00FF7F;
+        --button-cyan : #67FFFB;
         --input-green : #96fcc9;
         --red-inputs : #f86349;
+        --red-icons : red;
         --sf : 12px;
         --mf : 16px;
         --if : 18px;
@@ -54,6 +58,7 @@
     #right_side ul {
         display: flex;
         list-style: none;
+        align-items: center;
     }
     #left_side ul a,
     #right_side ul a {
@@ -78,10 +83,25 @@
         color: var(--red-inputs);
         font-weight: bold;
     }
-    @media(max-width:1023px){
+    .material-symbols-outlined{
+        color: var(--font-black);
+        font-weight: bold;
+        justify-content: center;
+    }
+    #icon_container {
+        width: 45px;
+        height: 45px;
+        background: var(--button-cyan);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+   @media(max-width:970px){
         #Menu {
             display: inline;
-            margin-right: 5%;
+            margin-right: 30VW;
         }
         #left_side {
             display: none;
@@ -89,12 +109,26 @@
         #right_side ul li:nth-child(1) a{
             display: none;
         }
+   }
+    @media(max-width:356){
+        #DD_logo {
+            height: 70%;
+        }
     }
-    @media(max-width:437px){
+    
+   
+    @media(max-width:600px){
         #right_side ul a {
-        margin: 0px 3px;
+        display: none;
+    }
+    #Menu {
+            margin-right: 5px;
+        }
+    #icon_container {
+        display: flex;
     }
 }
+
     
 </style>
 <body>
@@ -127,6 +161,14 @@
                     <li>
                         <a href="/">Sign Out</a>
                     </li>
+                    <li>
+                        <div id="icon_container">
+                        <span class="material-symbols-outlined">
+                            exit_to_app
+                            </span>
+                        </div>
+                    </li>
+
                 </ul>
             </section> 
     </nav>
