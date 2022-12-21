@@ -117,8 +117,8 @@
             <p id="greeting">Invest in stock Exchange using machine learning tools</p>
         </header>
         <section id="middle">
-            <form class="form" method="post">
-                <label class="label" for="name">First name</label>
+            <form class="form" method="post" onsubmit="return validate(this)">
+                <label class="label" for="name">First name, or how do you like to be called</label>
                 <input class="input" type="text" name="name">
                 <label class="label" for="email">Email</label>
                 <input class="input" type="text" name="email">
