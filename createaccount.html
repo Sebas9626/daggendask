@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;500;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./Logos/Shortcut.jpg" type="img">
     <title>New account in Daggen Dask</title>
+    <script src="./validation.js"></script>
 </head>
 <style>
     :root {
@@ -116,21 +117,22 @@
             <p id="greeting">Invest in stock Exchange using machine learning tools</p>
         </header>
         <section id="middle">
-            <form class="form">
-                <label class="label" for="name">First Name</label>
+            <form class="form" method="post">
+                <label class="label" for="name">First name</label>
                 <input class="input" type="text" name="name">
                 <label class="label" for="email">Email</label>
                 <input class="input" type="text" name="email">
-                <label class="label" for="date">Born date</label>
-                <input class="input" type="date" name="date">
+                <label class="label" for="date">Age</label>
+                <input class="input" type="number" name="age">
                 <label class="label" for="password">Password</label>
                 <input class="input" type="password" name="password">
                 <label class="label" for="password">Confirm your Password</label>
-                <input class="input" type="password" name="password confirm">
-                <button type="submit">Create account</button>
+                <input class="input" type="password" name="password_confirm">
+                <button id="submitBtn" type="submit">Create account</button>
             </form>
         </section>
     </section>
 </div>
+
 </body>
 </html>
