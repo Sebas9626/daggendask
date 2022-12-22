@@ -79,10 +79,6 @@
         color: var(--background-gray);
         font-weight: bold;
     }
-    #right_side ul li:nth-child(2) a{
-        color: var(--red-inputs);
-        font-weight: bold;
-    }
     .material-symbols-outlined{
         color: var(--font-black);
         font-weight: bold;
@@ -97,7 +93,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        display: none;
+        display: flex;
+    }
+    #icon_container:hover {
+        width: 50px;
+        height: 50px;
+        border: 2px var(--button-green) solid;
     }
    @media(max-width:970px){
         #Menu {
@@ -107,8 +108,7 @@
         #left_side {
             display: none;
         }
-        #right_side ul li:nth-child(1), 
-        #right_side ul li:nth-child(2){
+        #right_side ul li:nth-child(1){
             display: none;
         }
         #icon_container {
@@ -125,9 +125,6 @@
     #Menu {
             margin-right: 5px;
         }
-    #icon_container {
-        display: flex;
-    }
 }
 </style>
 <body>
@@ -136,40 +133,38 @@
         <img id="Menu" src="./Icons/menu_icon.png" alt="Menu">
         <img id="DD_logo" src="./Logos/Daggendask Cyan.jpg" alt="DD_Sign">  
         </div>
-            <section id="left_side">
-                <ul>
-                    <li>
-                        <a href="/">Your Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="/">Most Actives</a>
-                    </li>
-                    <li>
-                        <a href="/">Gainers</a>
-                    </li>
-                    <li>
-                        <a href="/">Losers</a>
-                    </li>
-                </ul>
-            </section>
-            <section id="right_side">
-                <ul>
-                    <li>
-                        <a href="/">Algoritmic Trading</a>
-                    </li>
-                    <li>
-                        <a href="/">Sign Out</a>
-                    </li>
-                    <li>
-                        <div id="icon_container">
-                        <span class="material-symbols-outlined">
-                            exit_to_app
-                            </span>
-                        </div>
-                    </li>
+        <section id="left_side">
+            
+            <ul>
+                <li>
+                    <a href="/">Your Portfolio</a>
+                </li>
+                <li>
+                    <a href="/">Most Actives</a>
+                </li>
+                <li>
+                    <a href="/">Gainers</a>
+                </li>
+                <li>
+                    <a href="/">Losers</a>
+                </li>
+            </ul>
+        </section>
+        <section id="right_side">
+            <ul>
+                <li>
+                    <a href="/">Algoritmic Trading</a>
+                </li>
+                <li>
+                    <div id="icon_container">
+                    <span class="material-symbols-outlined">
+                        exit_to_app
+                        </span>
+                    </div>
+                </li>
 
-                </ul>
-            </section> 
+            </ul>
+        </section> 
     </nav>
 </body>
 </html>
